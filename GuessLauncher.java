@@ -25,7 +25,7 @@ class Player
 		System.out.println("\nPlayer "+ playerNumber +", please Guess a number");
 		Scanner scanner = new Scanner(System.in);
 		int guessedNumber = scanner.nextInt();
-
+		scanner.close();
 		return guessedNumber;
 	}
 }
@@ -46,9 +46,6 @@ class Umpire
 	}
 
 	public void obtainGuesses(){
-		
-		
-		
 		
 		player1Guess = p1.guessTheNumber();
 		player2Guess = p2.guessTheNumber();
@@ -107,5 +104,6 @@ public class GuessLauncher
 		}
 		while(option!=0);
 		System.out.println("\nThank you. Please visit us again...\n");
+		sc.close();
 	}
 }
